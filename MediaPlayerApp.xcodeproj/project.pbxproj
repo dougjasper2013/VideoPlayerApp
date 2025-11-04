@@ -24,25 +24,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		80A10E872EBA3AE90001EF1E /* VideoPlayerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		80A10E942EBA3AEB0001EF1E /* VideoPlayerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoPlayerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		80A10E9E2EBA3AEB0001EF1E /* VideoPlayerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoPlayerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80A10E872EBA3AE90001EF1E /* MediaPlayerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaPlayerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80A10E942EBA3AEB0001EF1E /* MediaPlayerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediaPlayerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80A10E9E2EBA3AEB0001EF1E /* MediaPlayerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediaPlayerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		80A10EE42EBA3CE60001EF1E /* Exceptions for "MediaPlayerApp" folder in "MediaPlayerApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 80A10E862EBA3AE90001EF1E /* MediaPlayerApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		80A10E892EBA3AE90001EF1E /* VideoPlayerApp */ = {
+		80A10E892EBA3AE90001EF1E /* MediaPlayerApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = VideoPlayerApp;
+			exceptions = (
+				80A10EE42EBA3CE60001EF1E /* Exceptions for "MediaPlayerApp" folder in "MediaPlayerApp" target */,
+			);
+			path = MediaPlayerApp;
 			sourceTree = "<group>";
 		};
-		80A10E972EBA3AEB0001EF1E /* VideoPlayerAppTests */ = {
+		80A10E972EBA3AEB0001EF1E /* MediaPlayerAppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = VideoPlayerAppTests;
+			path = MediaPlayerAppTests;
 			sourceTree = "<group>";
 		};
-		80A10EA12EBA3AEB0001EF1E /* VideoPlayerAppUITests */ = {
+		80A10EA12EBA3AEB0001EF1E /* MediaPlayerAppUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = VideoPlayerAppUITests;
+			path = MediaPlayerAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,9 +88,9 @@
 		80A10E7E2EBA3AE90001EF1E = {
 			isa = PBXGroup;
 			children = (
-				80A10E892EBA3AE90001EF1E /* VideoPlayerApp */,
-				80A10E972EBA3AEB0001EF1E /* VideoPlayerAppTests */,
-				80A10EA12EBA3AEB0001EF1E /* VideoPlayerAppUITests */,
+				80A10E892EBA3AE90001EF1E /* MediaPlayerApp */,
+				80A10E972EBA3AEB0001EF1E /* MediaPlayerAppTests */,
+				80A10EA12EBA3AEB0001EF1E /* MediaPlayerAppUITests */,
 				80A10E882EBA3AE90001EF1E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,9 +98,9 @@
 		80A10E882EBA3AE90001EF1E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				80A10E872EBA3AE90001EF1E /* VideoPlayerApp.app */,
-				80A10E942EBA3AEB0001EF1E /* VideoPlayerAppTests.xctest */,
-				80A10E9E2EBA3AEB0001EF1E /* VideoPlayerAppUITests.xctest */,
+				80A10E872EBA3AE90001EF1E /* MediaPlayerApp.app */,
+				80A10E942EBA3AEB0001EF1E /* MediaPlayerAppTests.xctest */,
+				80A10E9E2EBA3AEB0001EF1E /* MediaPlayerAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +108,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		80A10E862EBA3AE90001EF1E /* VideoPlayerApp */ = {
+		80A10E862EBA3AE90001EF1E /* MediaPlayerApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 80A10EA82EBA3AEB0001EF1E /* Build configuration list for PBXNativeTarget "VideoPlayerApp" */;
+			buildConfigurationList = 80A10EA82EBA3AEB0001EF1E /* Build configuration list for PBXNativeTarget "MediaPlayerApp" */;
 			buildPhases = (
 				80A10E832EBA3AE90001EF1E /* Sources */,
 				80A10E842EBA3AE90001EF1E /* Frameworks */,
@@ -108,18 +121,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				80A10E892EBA3AE90001EF1E /* VideoPlayerApp */,
+				80A10E892EBA3AE90001EF1E /* MediaPlayerApp */,
 			);
-			name = VideoPlayerApp;
+			name = MediaPlayerApp;
 			packageProductDependencies = (
 			);
 			productName = VideoPlayerApp;
-			productReference = 80A10E872EBA3AE90001EF1E /* VideoPlayerApp.app */;
+			productReference = 80A10E872EBA3AE90001EF1E /* MediaPlayerApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		80A10E932EBA3AEB0001EF1E /* VideoPlayerAppTests */ = {
+		80A10E932EBA3AEB0001EF1E /* MediaPlayerAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 80A10EAB2EBA3AEB0001EF1E /* Build configuration list for PBXNativeTarget "VideoPlayerAppTests" */;
+			buildConfigurationList = 80A10EAB2EBA3AEB0001EF1E /* Build configuration list for PBXNativeTarget "MediaPlayerAppTests" */;
 			buildPhases = (
 				80A10E902EBA3AEB0001EF1E /* Sources */,
 				80A10E912EBA3AEB0001EF1E /* Frameworks */,
@@ -131,18 +144,18 @@
 				80A10E962EBA3AEB0001EF1E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				80A10E972EBA3AEB0001EF1E /* VideoPlayerAppTests */,
+				80A10E972EBA3AEB0001EF1E /* MediaPlayerAppTests */,
 			);
-			name = VideoPlayerAppTests;
+			name = MediaPlayerAppTests;
 			packageProductDependencies = (
 			);
 			productName = VideoPlayerAppTests;
-			productReference = 80A10E942EBA3AEB0001EF1E /* VideoPlayerAppTests.xctest */;
+			productReference = 80A10E942EBA3AEB0001EF1E /* MediaPlayerAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		80A10E9D2EBA3AEB0001EF1E /* VideoPlayerAppUITests */ = {
+		80A10E9D2EBA3AEB0001EF1E /* MediaPlayerAppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 80A10EAE2EBA3AEB0001EF1E /* Build configuration list for PBXNativeTarget "VideoPlayerAppUITests" */;
+			buildConfigurationList = 80A10EAE2EBA3AEB0001EF1E /* Build configuration list for PBXNativeTarget "MediaPlayerAppUITests" */;
 			buildPhases = (
 				80A10E9A2EBA3AEB0001EF1E /* Sources */,
 				80A10E9B2EBA3AEB0001EF1E /* Frameworks */,
@@ -154,13 +167,13 @@
 				80A10EA02EBA3AEB0001EF1E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				80A10EA12EBA3AEB0001EF1E /* VideoPlayerAppUITests */,
+				80A10EA12EBA3AEB0001EF1E /* MediaPlayerAppUITests */,
 			);
-			name = VideoPlayerAppUITests;
+			name = MediaPlayerAppUITests;
 			packageProductDependencies = (
 			);
 			productName = VideoPlayerAppUITests;
-			productReference = 80A10E9E2EBA3AEB0001EF1E /* VideoPlayerAppUITests.xctest */;
+			productReference = 80A10E9E2EBA3AEB0001EF1E /* MediaPlayerAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +199,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 80A10E822EBA3AE90001EF1E /* Build configuration list for PBXProject "VideoPlayerApp" */;
+			buildConfigurationList = 80A10E822EBA3AE90001EF1E /* Build configuration list for PBXProject "MediaPlayerApp" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -200,9 +213,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				80A10E862EBA3AE90001EF1E /* VideoPlayerApp */,
-				80A10E932EBA3AEB0001EF1E /* VideoPlayerAppTests */,
-				80A10E9D2EBA3AEB0001EF1E /* VideoPlayerAppUITests */,
+				80A10E862EBA3AE90001EF1E /* MediaPlayerApp */,
+				80A10E932EBA3AEB0001EF1E /* MediaPlayerAppTests */,
+				80A10E9D2EBA3AEB0001EF1E /* MediaPlayerAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,12 +271,12 @@
 /* Begin PBXTargetDependency section */
 		80A10E962EBA3AEB0001EF1E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 80A10E862EBA3AE90001EF1E /* VideoPlayerApp */;
+			target = 80A10E862EBA3AE90001EF1E /* MediaPlayerApp */;
 			targetProxy = 80A10E952EBA3AEB0001EF1E /* PBXContainerItemProxy */;
 		};
 		80A10EA02EBA3AEB0001EF1E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 80A10E862EBA3AE90001EF1E /* VideoPlayerApp */;
+			target = 80A10E862EBA3AE90001EF1E /* MediaPlayerApp */;
 			targetProxy = 80A10E9F2EBA3AEB0001EF1E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -397,6 +410,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MediaPlayerApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -424,6 +438,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MediaPlayerApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -456,7 +471,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoPlayerApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VideoPlayerApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MediaPlayerApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MediaPlayerApp";
 			};
 			name = Debug;
 		};
@@ -474,7 +489,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoPlayerApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VideoPlayerApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MediaPlayerApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MediaPlayerApp";
 			};
 			name = Release;
 		};
@@ -513,7 +528,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		80A10E822EBA3AE90001EF1E /* Build configuration list for PBXProject "VideoPlayerApp" */ = {
+		80A10E822EBA3AE90001EF1E /* Build configuration list for PBXProject "MediaPlayerApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				80A10EA62EBA3AEB0001EF1E /* Debug */,
@@ -522,7 +537,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		80A10EA82EBA3AEB0001EF1E /* Build configuration list for PBXNativeTarget "VideoPlayerApp" */ = {
+		80A10EA82EBA3AEB0001EF1E /* Build configuration list for PBXNativeTarget "MediaPlayerApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				80A10EA92EBA3AEB0001EF1E /* Debug */,
@@ -531,7 +546,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		80A10EAB2EBA3AEB0001EF1E /* Build configuration list for PBXNativeTarget "VideoPlayerAppTests" */ = {
+		80A10EAB2EBA3AEB0001EF1E /* Build configuration list for PBXNativeTarget "MediaPlayerAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				80A10EAC2EBA3AEB0001EF1E /* Debug */,
@@ -540,7 +555,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		80A10EAE2EBA3AEB0001EF1E /* Build configuration list for PBXNativeTarget "VideoPlayerAppUITests" */ = {
+		80A10EAE2EBA3AEB0001EF1E /* Build configuration list for PBXNativeTarget "MediaPlayerAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				80A10EAF2EBA3AEB0001EF1E /* Debug */,
