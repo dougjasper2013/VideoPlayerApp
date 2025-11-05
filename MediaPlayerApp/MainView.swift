@@ -18,7 +18,7 @@ struct MainView: View {
             }
 
             NavigationView {
-                AudioPlaceholderView() // Placeholder for future AudioPlayer
+                AudioListView() 
             }
             .tabItem {
                 Label("Audio", systemImage: "music.note")
