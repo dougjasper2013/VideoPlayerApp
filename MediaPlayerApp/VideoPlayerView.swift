@@ -9,20 +9,45 @@ import SwiftUI
 import AVKit
 
 struct VideoPlayerView: View {
-    let videoName: String
+    let fileName: String
+    @State private var player: AVPlayer?
+    @State private var isSharing = false
 
     var body: some View {
         VStack {
-            // Try loading both mp4 and m4v using the stored fileName
-            if let path = Bundle.main.path(forResource: videoName, ofType: nil) {
-                let player = AVPlayer(url: URL(fileURLWithPath: path))
+            if let path = Bundle.main.path(forResource: fileName, ofType: nil) {
+                let url = URL(fileURLWithPath: path) // Get video URL
+                
+                // Video Player
                 VideoPlayer(player: player)
-                    .onAppear { player.play() }
+                    .onAppear {
+                        player = AVPlayer(url: url)
+                        player?.play()
+                    }
+                    .onDisappear {
+                        player?.pause()
+                        player?.seek(to: .zero)
+                    }
+                
+                // Share Button
+                Button(action: {
+                    isSharing = true
+                }) {
+                    Label("Share Video", systemImage: "square.and.arrow.up")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                }
+                .padding()
+                .sheet(isPresented: $isSharing) {
+                    ShareSheet(activityItems: [url])
+                }
             } else {
                 Text("Video not found")
                     .foregroundColor(.red)
                     .onAppear {
-                        print("❌ Video not found: \(videoName)")
+                        print("❌ Video not found: \(fileName)")
                     }
             }
         }
@@ -30,5 +55,5 @@ struct VideoPlayerView: View {
 }
 
 #Preview {
-    VideoPlayerView(videoName: "BookTrailer.m4v")
+    VideoPlayerView(fileName: "BookTrailer.m4v")
 }

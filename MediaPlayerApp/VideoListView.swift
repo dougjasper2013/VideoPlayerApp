@@ -11,14 +11,33 @@ struct VideoListView: View {
     @StateObject private var videoLoader = VideoLoader()
 
     var body: some View {
-        NavigationView {
-            List(videoLoader.videos) { video in
-                NavigationLink(destination: VideoPlayerView(videoName: video.fileName)) {
-                    Text(video.name)
+        List(videoLoader.videos) { video in
+            NavigationLink(destination: VideoPlayerView(fileName: video.fileName)) {
+                HStack {
+                    if let thumbnail = video.thumbnail {
+                        Image(uiImage: thumbnail)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 80, height: 45)
+                            .clipped()
+                            .cornerRadius(8)
+                    } else {
+                        Rectangle()
+                            .fill(Color.gray)
+                            .frame(width: 80, height: 45)
+                            .cornerRadius(8)
+                    }
+
+                    VStack(alignment: .leading) {
+                        Text(video.name).font(.headline)
+                        Text(video.duration).font(.subheadline).foregroundColor(.gray)
+                    }
                 }
+                .padding(.vertical, 5)
             }
-            .navigationTitle("Videos")
         }
+        .navigationTitle("Videos")
+        .onAppear { videoLoader.loadVideos() }
     }
 }
 
