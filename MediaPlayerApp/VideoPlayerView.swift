@@ -22,12 +22,23 @@ struct VideoPlayerView: View {
                 .onDisappear {
                     player.pause()
                 }
-        } else {
+        }
+        else if  let path = Bundle.main.path(forResource: videoName, ofType: "m4v") {
+                let player = AVPlayer(url: URL(fileURLWithPath: path))
+                VideoPlayer(player: player)
+                    .onAppear {
+                        player.play()
+                    }
+                    .onDisappear {
+                        player.pause()
+                    }
+            }
+                else {
             Text("Video not found")
         }
     }
 }
 
 #Preview {
-    VideoPlayerView(videoName: "BookTrailer.m4v")
+    VideoPlayerView(videoName: "BookTrailer")
 }

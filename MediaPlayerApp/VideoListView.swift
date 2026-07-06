@@ -13,7 +13,7 @@ struct VideoListView: View {
     var body: some View {
         NavigationView {
             List(videoLoader.videos) { video in
-                NavigationLink(destination: VideoPlayerView(videoName: video.fileName)) {
+                NavigationLink(destination: VideoPlayerView(videoName: video.name)) {
                     Text(video.name)
                 }
             }
