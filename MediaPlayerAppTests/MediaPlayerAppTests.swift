@@ -6,9 +6,9 @@
 //
 
 import Testing
-@testable import VideoPlayerApp
+@testable import MediaPlayerApp
 
-struct VideoPlayerAppTests {
+struct MediaPlayerAppTests {
 
     @Test func example() async throws {
         // Write your test here and use APIs like `#expect(...)` to check expected conditions.

@@ -7,6 +7,7 @@
 
 
 import Foundation
+import Combine
 
 class VideoLoader: ObservableObject {
     @Published var videos: [Video] = []

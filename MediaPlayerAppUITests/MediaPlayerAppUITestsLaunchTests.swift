@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class VideoPlayerAppUITestsLaunchTests: XCTestCase {
+final class MediaPlayerAppUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
