@@ -10,50 +10,83 @@ import AVFoundation
 
 struct AudioPlayerView: View {
     let fileName: String
+
     @State private var player: AVAudioPlayer?
+    @State private var audioURL: URL?
+    @State private var showingShareSheet = false
 
     var body: some View {
-        VStack {
-            Text(fileName)
-                .font(.title2)
-                .padding()
+        VStack(spacing: 30) {
 
-            HStack {
+            Image(systemName: "music.note")
+                .font(.system(size: 80))
+                .foregroundColor(.blue)
+
+            Text((fileName as NSString).deletingPathExtension)
+                .font(.title2)
+
+            HStack(spacing: 40) {
+
                 Button(action: playAudio) {
-                    Image(systemName: "play.fill")
-                        .resizable()
-                        .frame(width: 50, height: 50)
+                    Image(systemName: "play.circle.fill")
+                        .font(.system(size: 60))
                         .foregroundColor(.green)
                 }
 
                 Button(action: pauseAudio) {
-                    Image(systemName: "pause.fill")
-                        .resizable()
-                        .frame(width: 50, height: 50)
-                        .foregroundColor(.yellow)
+                    Image(systemName: "pause.circle.fill")
+                        .font(.system(size: 60))
+                        .foregroundColor(.orange)
                 }
 
                 Button(action: stopAudio) {
-                    Image(systemName: "stop.fill")
-                        .resizable()
-                        .frame(width: 50, height: 50)
+                    Image(systemName: "stop.circle.fill")
+                        .font(.system(size: 60))
                         .foregroundColor(.red)
                 }
             }
-            .padding()
+
+            Button {
+                showingShareSheet = true
+            } label: {
+                Label("Share Audio", systemImage: "square.and.arrow.up")
+                    .font(.headline)
+            }
+            .buttonStyle(.borderedProminent)
+            .disabled(audioURL == nil)
+
+            Spacer()
         }
-        .onAppear { setupAudioPlayer() }
-        .onDisappear { stopAudio() }
+        .padding()
+        .navigationTitle("Audio Player")
+        .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            setupAudioPlayer()
+        }
+        .onDisappear {
+            stopAudio()
+        }
+        .sheet(isPresented: $showingShareSheet) {
+            if let audioURL {
+                ShareSheet(activityItems: [audioURL])
+            }
+        }
     }
 
     private func setupAudioPlayer() {
-        if let path = Bundle.main.path(forResource: fileName, ofType: nil) {
-            let url = URL(fileURLWithPath: path)
-            do {
-                player = try AVAudioPlayer(contentsOf: url)
-            } catch {
-                print("❌ Error loading audio file: \(error)")
-            }
+
+        guard let path = Bundle.main.path(forResource: fileName, ofType: nil) else {
+            return
+        }
+
+        let url = URL(fileURLWithPath: path)
+        audioURL = url
+
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            player?.prepareToPlay()
+        } catch {
+            print("Error loading audio: \(error)")
         }
     }
 
@@ -72,5 +105,5 @@ struct AudioPlayerView: View {
 }
 
 #Preview {
-    AudioPlayerView(fileName: "bounce.wav")
+    AudioPlayerView(fileName: "PocketCyclopsLvl1.mp3")
 }
